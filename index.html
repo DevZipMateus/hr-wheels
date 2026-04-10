@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Wheels Alinhadora</title>
+  <meta name="description" content="HR Wheels Alinhadora – Equipamentos de precisão para alinhamento de motocicletas. Desempeno de rodas, alinhadores de mesa e bengala. Hortolândia/SP.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="HR Wheels Alinhadora">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HR Wheels Alinhadora">
+  <meta property="og:description" content="Equipamentos de precisão para alinhamento de motocicletas. Qualidade, inovação e durabilidade em cada produto.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HR Wheels Alinhadora">
+  <meta name="twitter:description" content="Equipamentos de precisão para alinhamento de motocicletas.">
+  <meta name="twitter:image" content="images/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ── Reset & base ─────────────────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black:      #0A0A0A;
+      --black-2:    #111111;
+      --black-3:    #181818;
+      --gold:       #C9A84C;
+      --gold-light: #DDB96A;
+      --gold-dark:  #9E7828;
+      --white:      #F2F2F2;
+      --gray:       #AAAAAA;
+      --gray-dark:  #555555;
+      --border:     rgba(201,168,76,.18);
+      --header-h:   72px;
+    }
+
+    html { scroll-behavior: smooth; }
+    html, body { overflow-x: hidden; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    section, [id] { scroll-margin-top: var(--header-h); }
+
+    /* ── Container ────────────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Section tag ──────────────────────────────────────────── */
+    .section-tag {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 14px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,168,76,.1);
+      padding: 5px 16px;
+      border-radius: 30px;
+      border: 1px solid rgba(201,168,76,.28);
+    }
+
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 700;
+      color: var(--white);
+      text-align: center;
+      line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .section-title span { color: var(--gold); }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--gray);
+      text-align: center;
+      max-width: 600px;
+      margin: 14px auto 0;
+      line-height: 1.7;
+    }
+
+    /* ── Buttons ──────────────────────────────────────────────── */
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--black);
+      padding: 14px 32px;
+      border-radius: 4px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 2px solid var(--gold);
+      cursor: pointer;
+      transition: background .25s, border-color .25s;
+    }
+    .btn-gold:hover { background: var(--gold-light); border-color: var(--gold-light); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.06);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 4px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 2px solid rgba(255,255,255,.35);
+      cursor: pointer;
+      transition: background .25s, border-color .25s;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.65); }
+
+    /* ── HEADER ───────────────────────────────────────────────── */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--header-h);
+      z-index: 1000;
+      background: rgba(10,10,10,.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .3s;
+    }
+    #header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,.6); }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--header-h);
+    }
+
+    .logo-wrap { display: flex; align-items: center; flex-shrink: 0; }
+    .logo-wrap img { height: 44px; width: auto; }
+
+    .menu-btn {
+      display: none;
+      background: none; border: none;
+      color: var(--white); font-size: 22px;
+      cursor: pointer; padding: 6px;
+    }
+
+    /* ── NAV (irmão do header) ────────────────────────────────── */
+    nav#navMenu {
+      position: fixed;
+      top: 0; right: 0;
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding-right: 24px;
+      z-index: 1001;
+    }
+
+    nav#navMenu a {
+      color: rgba(255,255,255,.7);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 8px 13px;
+      border-radius: 4px;
+      transition: color .2s, background .2s;
+    }
+    nav#navMenu a:hover  { color: var(--white); background: rgba(255,255,255,.08); }
+    nav#navMenu a.active { color: var(--gold) !important; }
+
+    .header-cta {
+      background: var(--gold) !important;
+      color: var(--black) !important;
+      border-radius: 4px;
+    }
+    .header-cta:hover { background: var(--gold-light) !important; color: var(--black) !important; }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    #hero {
+      padding-top: var(--header-h);
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 50% -10%, rgba(201,168,76,.12) 0%, transparent 55%),
+        repeating-linear-gradient(60deg,  rgba(201,168,76,.025) 0px, rgba(201,168,76,.025) 1px, transparent 1px, transparent 80px),
+        repeating-linear-gradient(-60deg, rgba(201,168,76,.015) 0px, rgba(201,168,76,.015) 1px, transparent 1px, transparent 100px);
+      background-color: var(--black);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 80px 0 64px;
+    }
+
+    .hero-logo {
+      height: 130px;
+      width: auto;
+      margin-bottom: 36px;
+      filter: drop-shadow(0 0 28px rgba(201,168,76,.28));
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,168,76,.1);
+      border: 1px solid rgba(201,168,76,.3);
+      border-radius: 30px;
+      padding: 6px 18px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 24px;
+    }
+
+    #hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(64px, 12vw, 130px);
+      line-height: 0.95;
+      color: var(--white);
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+    #hero h1 span { color: var(--gold); }
+
+    #hero h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(15px, 2.2vw, 20px);
+      font-weight: 400;
+      color: var(--gray);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.55;
+    }
+
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-bottom: 64px; }
+
+    .hero-stats {
+      display: flex;
+      gap: 56px;
+      border-top: 1px solid var(--border);
+      padding-top: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .stat-item { text-align: center; }
+    .stat-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 40px;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 11px;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 4px;
+    }
+
+    /* ── SOBRE ────────────────────────────────────────────────── */
+    #sobre {
+      padding: 96px 0;
+      background: var(--black-2);
+    }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+      margin-top: 60px;
+    }
+
+    .sobre-historia .section-tag { margin: 0 0 16px; }
+    .sobre-historia .section-title { text-align: left; font-size: clamp(24px, 3.2vw, 38px); }
+
+    .sobre-historia p {
+      font-size: 15.5px;
+      color: var(--gray);
+      line-height: 1.85;
+      margin-top: 18px;
+    }
+
+    .sobre-quote {
+      background: var(--black-3);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-top: 28px;
+    }
+    .sobre-quote p {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 16px;
+      font-style: italic;
+      color: var(--gold-light);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .mvv-list { display: flex; flex-direction: column; gap: 14px; }
+    .mvv-item {
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 22px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: border-color .3s;
+    }
+    .mvv-item:hover { border-color: rgba(201,168,76,.42); }
+    .mvv-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: rgba(201,168,76,.1);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold); font-size: 16px;
+    }
+    .mvv-item h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .mvv-item p { font-size: 14px; color: var(--gray); line-height: 1.65; margin: 0; }
+
+    /* ── PRODUTOS ─────────────────────────────────────────────── */
+    #produtos {
+      padding: 96px 0;
+      background: var(--black);
+    }
+
+    .produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .produto-card {
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 30px;
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .produto-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0; transition: opacity .3s;
+    }
+    .produto-card:hover {
+      border-color: rgba(201,168,76,.4);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(0,0,0,.5);
+    }
+    .produto-card:hover::before { opacity: 1; }
+
+    .produto-icon {
+      width: 60px; height: 60px;
+      background: rgba(201,168,76,.1);
+      border: 1px solid rgba(201,168,76,.22);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .produto-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .produto-card p {
+      font-size: 14.5px;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+    .produto-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      transition: gap .2s;
+    }
+    .produto-card:hover .produto-link { gap: 10px; }
+
+    .produtos-dev {
+      margin-top: 32px;
+      padding: 18px 24px;
+      background: var(--black-3);
+      border: 1px dashed rgba(201,168,76,.22);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .produtos-dev i { color: var(--gold); font-size: 20px; flex-shrink: 0; }
+    .produtos-dev p { font-size: 14.5px; color: var(--gray); margin: 0; }
+    .produtos-dev strong { color: var(--gold-light); }
+
+    /* ── DIFERENCIAIS ─────────────────────────────────────────── */
+    #diferenciais {
+      padding: 96px 0;
+      background:
+        linear-gradient(rgba(10,10,10,.88), rgba(10,10,10,.88)),
+        url('images/bg-diferenciais.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
+    }
+
+    .diferenciais-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 56px;
+    }
+
+    .diferencial-item {
+      text-align: center;
+      padding: 36px 20px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: background .3s, border-color .3s, transform .3s;
+    }
+    .diferencial-item:hover {
+      background: rgba(201,168,76,.06);
+      border-color: rgba(201,168,76,.4);
+      transform: translateY(-5px);
+    }
+    .diferencial-item i { font-size: 36px; color: var(--gold); margin-bottom: 16px; }
+    .diferencial-item h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--white); margin-bottom: 10px;
+    }
+    .diferencial-item p { font-size: 14px; color: var(--gray); line-height: 1.65; }
+
+    /* ── GALERIA ──────────────────────────────────────────────── */
+    #galeria {
+      padding: 96px 0;
+      background: var(--black-2);
+    }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 56px;
+    }
+
+    .galeria-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+    }
+    .galeria-item img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform .5s ease;
+      filter: grayscale(15%);
+    }
+    .galeria-item:hover img { transform: scale(1.07); filter: grayscale(0%); }
+    .galeria-overlay {
+      position: absolute; inset: 0;
+      background: rgba(10,10,10,.6);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity .3s;
+    }
+    .galeria-item:hover .galeria-overlay { opacity: 1; }
+    .galeria-overlay i { color: var(--gold); font-size: 28px; }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 10000;
+      background: rgba(0,0,0,.95);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity .3s;
+    }
+    .lightbox.open { opacity: 1; pointer-events: auto; }
+    .lb-img { max-width: min(90vw,1100px); max-height: 85vh; object-fit: contain; border-radius: 6px; display: block; }
+    .lb-close {
+      position: absolute; top: 16px; right: 20px;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+      border-radius: 6px; color: var(--white); font-size: 18px;
+      width: 40px; height: 40px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s, color .2s;
+    }
+    .lb-close:hover { background: rgba(201,168,76,.2); color: var(--gold); }
+    .lb-prev, .lb-next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+      color: var(--white); font-size: 16px;
+      width: 44px; height: 44px; border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s, color .2s;
+    }
+    .lb-prev { left: 20px; } .lb-next { right: 20px; }
+    .lb-prev:hover, .lb-next:hover { background: rgba(201,168,76,.2); color: var(--gold); }
+
+    /* ── CONTATO ──────────────────────────────────────────────── */
+    #contato {
+      padding: 96px 0;
+      background: var(--black);
+    }
+
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+      margin-top: 56px;
+    }
+
+    .contato-info { display: flex; flex-direction: column; gap: 14px; }
+
+    .info-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 18px 20px;
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: border-color .3s;
+    }
+    .info-card:hover { border-color: rgba(201,168,76,.4); }
+    .info-icon {
+      width: 42px; height: 42px; flex-shrink: 0;
+      background: rgba(201,168,76,.1);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold); font-size: 17px;
+    }
+    .info-card h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gray-dark); margin-bottom: 4px;
+    }
+    .info-card p, .info-card a { font-size: 15px; color: var(--white); line-height: 1.5; }
+    .info-card a:hover { color: var(--gold); }
+
+    .contato-cta {
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      display: flex; flex-direction: column; gap: 18px;
+    }
+    .contato-cta h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 28px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--white); line-height: 1.2;
+    }
+    .contato-cta h3 span { color: var(--gold); }
+    .contato-cta p { font-size: 15px; color: var(--gray); line-height: 1.7; }
+
+    .cta-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 8px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 17px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      transition: background .25s;
+    }
+    .cta-wa:hover { background: #1ebe5d; }
+
+    .cta-insta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px;
+      background: rgba(255,255,255,.05);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 8px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase;
+      transition: background .25s, border-color .25s;
+    }
+    .cta-insta:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.3); }
+
+    /* ── FOOTER ───────────────────────────────────────────────── */
+    footer {
+      background: var(--black-2);
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px; flex-wrap: wrap;
+    }
+    footer p { font-size: 13px; color: var(--gray-dark); }
+    footer a { color: var(--gray); transition: color .2s; }
+    footer a:hover { color: var(--gold); }
+
+    /* ── WhatsApp flutuante (fixo e discreto) ─────────────────── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px; right: 28px; z-index: 900;
+      width: 56px; height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 18px rgba(37,211,102,.3);
+      color: #fff; font-size: 26px;
+      transition: background .2s, transform .2s;
+    }
+    .whatsapp-float:hover { background: #1ebe5d; transform: scale(1.06); }
+
+    /* ── Scroll progress ──────────────────────────────────────── */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; z-index: 9999;
+      height: 2px; width: 0%;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+    }
+
+    /* ── Back to top ──────────────────────────────────────────── */
+    .back-top {
+      position: fixed; bottom: 92px; right: 28px; z-index: 900;
+      width: 44px; height: 44px;
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      border-radius: 50%; color: var(--gold); font-size: 15px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transform: translateY(10px);
+      transition: opacity .3s, transform .3s, background .2s, border-color .2s;
+      pointer-events: none;
+    }
+    .back-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .back-top:hover { background: rgba(201,168,76,.12); border-color: rgba(201,168,76,.45); }
+
+    /* ── Animações hero ───────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-logo  { animation: fadeUp .7s ease .1s  both; }
+    .hero-badge { animation: fadeUp .6s ease .3s  both; }
+    #hero h1    { animation: fadeUp .6s ease .45s both; }
+    #hero h2    { animation: fadeUp .6s ease .6s  both; }
+    .hero-btns  { animation: fadeUp .6s ease .75s both; }
+    .hero-stats { animation: fadeUp .6s ease .9s  both; }
+
+    /* ── Scroll reveal ────────────────────────────────────────── */
+    .reveal, .reveal-l, .reveal-r {
+      opacity: 0; transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal   { transform: translateY(32px); }
+    .reveal-l { transform: translateX(-36px); }
+    .reveal-r { transform: translateX(36px); }
+    .reveal.show, .reveal-l.show, .reveal-r.show { opacity: 1; transform: none; }
+
+    /* ── Responsividade ───────────────────────────────────────── */
+    @media (max-width: 1023px) {
+      #diferenciais { background-attachment: scroll, scroll; }
+    }
+
+    @media (max-width: 1100px) {
+      nav#navMenu { padding-right: 20px; }
+      .sobre-grid        { grid-template-columns: 1fr; gap: 40px; }
+      .diferenciais-grid { grid-template-columns: repeat(2, 1fr); }
+      #sobre, #produtos, #diferenciais, #galeria, #contato { padding: 80px 0; }
+    }
+
+    @media (max-width: 768px) {
+      .menu-btn { display: block; }
+      nav#navMenu {
+        position: fixed;
+        top: var(--header-h); right: 0; left: 0;
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 20px;
+        background: rgba(10,10,10,.98);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        gap: 4px;
+        display: none;
+      }
+      nav#navMenu.open { display: flex; }
+      nav#navMenu a { padding: 12px 16px; border-radius: 6px; }
+
+      #sobre, #produtos, #diferenciais, #galeria, #contato { padding: 72px 0; }
+      .hero-inner { padding: 60px 0 48px; }
+      .hero-logo { height: 92px; }
+      .hero-stats { gap: 28px; }
+
+      .produtos-grid { grid-template-columns: 1fr; }
+      .galeria-grid  { grid-template-columns: repeat(2, 1fr); }
+      .contato-grid  { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      #sobre, #produtos, #diferenciais, #galeria, #contato { padding: 64px 0; }
+      .hero-inner { padding: 48px 0 40px; }
+      .hero-logo { height: 72px; }
+      #hero h1 { font-size: clamp(54px, 15vw, 90px); }
+      .hero-btns { flex-direction: column; align-items: center; }
+      .btn-gold, .btn-outline { width: 100%; max-width: 320px; justify-content: center; }
+      .diferenciais-grid { grid-template-columns: 1fr; }
+      .galeria-grid { grid-template-columns: 1fr; }
+      .produto-card { padding: 28px 22px; }
+      .contato-cta  { padding: 28px 20px; }
+    }
+
+    @media (max-width: 375px) {
+      .container { padding: 0 12px; }
+      :root { --header-h: 64px; }
+      #sobre, #produtos, #diferenciais, #galeria, #contato { padding: 56px 0; }
+      .hero-logo { height: 60px; }
+    }
+
+    @media (min-width: 1400px) {
+      .container { max-width: 1280px; }
+      nav#navMenu { padding-right: calc((100vw - 1280px) / 2 + 24px); }
+    }
+
+    @media (min-width: 1920px) {
+      .container { max-width: 1520px; }
+      nav#navMenu { padding-right: calc((100vw - 1520px) / 2 + 24px); }
+      #sobre, #produtos, #diferenciais, #galeria, #contato { padding: 112px 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────── -->
+  <header id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#hero" class="logo-wrap" aria-label="HR Wheels – início">
+          <img src="images/logo.png" alt="HR Wheels Alinhadora de Rodas">
+        </a>
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+          <i class="fas fa-bars" id="menuIcon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Nav (irmão do header) ──────────────────────────────── -->
+  <nav id="navMenu" role="navigation" aria-label="Navegação principal">
+    <a href="#sobre">Sobre</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#diferenciais">Diferenciais</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#contato">Contato</a>
+    <a href="https://wa.me/5519981885648" target="_blank" rel="noopener noreferrer" class="header-cta">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i> Orçamento
+    </a>
+  </nav>
+
+  <!-- ── Hero ───────────────────────────────────────────────── -->
+  <section id="hero" aria-label="Apresentação da empresa">
+    <div class="container">
+      <div class="hero-inner">
+
+        <img src="images/logo.png" alt="HR Wheels Alinhadora" class="hero-logo">
+
+        <div class="hero-badge">
+          <i class="fas fa-circle-dot" aria-hidden="true"></i>
+          Precisão em cada alinhamento
+        </div>
+
+        <h1>HR <span>Wheels</span></h1>
+
+        <h2>Equipamentos de precisão para alinhamento de motocicletas</h2>
+
+        <div class="hero-btns">
+          <a href="https://wa.me/5519981885648" target="_blank" rel="noopener noreferrer" class="btn-gold">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            Solicitar orçamento
+          </a>
+          <a href="#produtos" class="btn-outline">
+            <i class="fas fa-list" aria-hidden="true"></i>
+            Ver produtos
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Equipamentos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">Nacional</div>
+            <div class="stat-label">Área de atuação</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Precisão</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Sobre ───────────────────────────────────────────────── -->
+  <section id="sobre" aria-labelledby="sobre-titulo">
+    <div class="container">
+      <span class="section-tag">Nossa história</span>
+      <h2 class="section-title" id="sobre-titulo">Nascida da <span>necessidade</span>,<br>crescida pela qualidade</h2>
+      <p class="section-subtitle">Conheça a trajetória da HR Wheels e o que nos move a cada dia.</p>
+
+      <div class="sobre-grid">
+
+        <div class="sobre-historia">
+          <span class="section-tag">Quem somos</span>
+          <h2 class="section-title">Uma empresa que surgiu da oficina para o mercado</h2>
+          <p>Trabalhando no ramo de desempeno e reformas de rodas em geral, surgiu a necessidade de equipamentos mais precisos e eficientes para executar os serviços com excelência. Foi dessa necessidade prática que começamos a desenvolver equipamentos de alta qualidade.</p>
+          <p>A ideia não ficou na oficina: colocamos nossos produtos no mercado para que outros parceiros também pudessem entregar eficiência nos serviços de suas oficinas. E assim nasceu a HR Wheels — uma marca que hoje cresce pela qualidade dos seus equipamentos.</p>
+          <div class="sobre-quote">
+            <p>"Desenvolvemos e fabricamos equipamentos para motocicletas com alta qualidade e tecnologia, oferecendo soluções eficientes que garantam segurança, desempenho e praticidade para nossos clientes."</p>
+          </div>
+        </div>
+
+        <div class="mvv-wrap">
+          <div class="mvv-list">
+            <div class="mvv-item">
+              <div class="mvv-icon"><i class="fas fa-bullseye" aria-hidden="true"></i></div>
+              <div>
+                <h3>Missão</h3>
+                <p>Desenvolver e fabricar equipamentos para motocicletas com alta qualidade e tecnologia, oferecendo soluções eficientes que garantam segurança, desempenho e praticidade.</p>
+              </div>
+            </div>
+            <div class="mvv-item">
+              <div class="mvv-icon"><i class="fas fa-eye" aria-hidden="true"></i></div>
+              <div>
+                <h3>Visão</h3>
+                <p>Ser referência nacional na fabricação de equipamentos para alinhamento de motocicletas, reconhecida pela precisão, durabilidade e inovação dos nossos produtos.</p>
+              </div>
+            </div>
+            <div class="mvv-item">
+              <div class="mvv-icon"><i class="fas fa-gem" aria-hidden="true"></i></div>
+              <div>
+                <h3>Valores</h3>
+                <p>Qualidade, segurança, inovação contínua, ética e transparência com clientes e parceiros, responsabilidade nas entregas e prazos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Produtos ────────────────────────────────────────────── -->
+  <section id="produtos" aria-labelledby="produtos-titulo">
+    <div class="container">
+      <span class="section-tag">Nossos equipamentos</span>
+      <h2 class="section-title" id="produtos-titulo">Linha completa de <span>alinhadores</span><br>para motocicletas</h2>
+      <p class="section-subtitle">Equipamentos desenvolvidos com tecnologia e precisão para elevar o nível do seu serviço.</p>
+
+      <div class="produtos-grid">
+
+        <article class="produto-card">
+          <div class="produto-icon"><i class="fas fa-circle-notch" aria-hidden="true"></i></div>
+          <h3>Desempeno de roda de moto</h3>
+          <p>Equipamento de alta precisão para corrigir empenamentos em rodas de motocicletas. Garante o alinhamento perfeito e a segurança nas curvas, eliminando vibrações e desgastes irregulares.</p>
+          <a href="https://wa.me/5519981885648" target="_blank" rel="noopener noreferrer" class="produto-link">
+            Solicitar orçamento <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="produto-card">
+          <div class="produto-icon"><i class="fas fa-angles-up" aria-hidden="true"></i></div>
+          <h3>Alinhador de mesa superior</h3>
+          <p>Mesa de alinhamento superior desenvolvida para verificar e corrigir o alinhamento da parte superior da motocicleta, garantindo precisão e estabilidade no diagnóstico.</p>
+          <a href="https://wa.me/5519981885648" target="_blank" rel="noopener noreferrer" class="produto-link">
+            Solicitar orçamento <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="produto-card">
+          <div class="produto-icon"><i class="fas fa-angles-down" aria-hidden="true"></i></div>
+          <h3>Alinhador de mesa inferior</h3>
+          <p>Mesa de alinhamento inferior para diagnóstico e correção da geometria da parte inferior da motocicleta, essencial para o desempenho e segurança em qualquer terreno.</p>
+          <a href="https://wa.me/5519981885648" target="_blank" rel="noopener noreferrer" class="produto-link">
+            Solicitar orçamento <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="produto-card">
+          <div class="produto-icon"><i class="fas fa-sliders" aria-hidden="true"></i></div>
+          <h3>Alinhador de bengala de moto</h3>
+          <p>Equipamento especializado no alinhamento da bengala (suspensão dianteira) da motocicleta. Assegura controle preciso, segurança máxima e estabilidade em alta velocidade.</p>
+          <a href="https://wa.me/5519981885648" target="_blank" rel="noopener noreferrer" class="produto-link">
+            Solicitar orçamento <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+      </div>
+
+      <div class="produtos-dev">
+        <i class="fas fa-flask" aria-hidden="true"></i>
+        <p><strong>Em desenvolvimento:</strong> novos equipamentos serão lançados em breve. Entre em contato para saber mais sobre os próximos lançamentos da HR Wheels.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Diferenciais ────────────────────────────────────────── -->
+  <section id="diferenciais" aria-labelledby="dif-titulo">
+    <div class="container">
+      <span class="section-tag">Por que nos escolher</span>
+      <h2 class="section-title" id="dif-titulo">Nossos <span>diferenciais</span></h2>
+      <p class="section-subtitle">Compromisso com qualidade, inovação e segurança em cada produto que fabricamos.</p>
+
+      <div class="diferenciais-grid">
+
+        <div class="diferencial-item">
+          <i class="fas fa-medal" aria-hidden="true"></i>
+          <h3>Qualidade e precisão</h3>
+          <p>Cada equipamento é fabricado com rigoroso controle de qualidade para entregar desempenho superior e resultados precisos.</p>
+        </div>
+
+        <div class="diferencial-item">
+          <i class="fas fa-shield-halved" aria-hidden="true"></i>
+          <h3>Compromisso com segurança</h3>
+          <p>Desenvolvemos equipamentos que garantem a segurança dos usuários e dos mecânicos em todas as etapas do serviço.</p>
+        </div>
+
+        <div class="diferencial-item">
+          <i class="fas fa-microchip" aria-hidden="true"></i>
+          <h3>Inovação contínua</h3>
+          <p>Buscamos constantemente novas tecnologias e processos para aprimorar nossos equipamentos e entregar o que há de mais moderno.</p>
+        </div>
+
+        <div class="diferencial-item">
+          <i class="fas fa-handshake" aria-hidden="true"></i>
+          <h3>Ética e confiabilidade</h3>
+          <p>Transparência nas relações, prazos cumpridos e compromisso real com cada cliente e parceiro. Assim trabalhamos na HR Wheels.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Galeria ─────────────────────────────────────────────── -->
+  <section id="galeria" aria-labelledby="galeria-titulo">
+    <div class="container">
+      <span class="section-tag">Nossos trabalhos</span>
+      <h2 class="section-title" id="galeria-titulo">Equipamentos e <span>serviços</span><br>em ação</h2>
+      <p class="section-subtitle">Veja de perto a qualidade dos nossos equipamentos e o resultado na prática.</p>
+
+      <div class="galeria-grid">
+        <div class="galeria-item" data-index="0">
+          <img src="images/galeria-1.jpg" alt="Mecânico trabalhando em motocicleta" loading="lazy">
+          <div class="galeria-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+        </div>
+        <div class="galeria-item" data-index="1">
+          <img src="images/galeria-2.jpg" alt="Profissional realizando serviço em moto" loading="lazy">
+          <div class="galeria-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+        </div>
+        <div class="galeria-item" data-index="2">
+          <img src="images/galeria-3.jpg" alt="Motocicleta em manutenção especializada" loading="lazy">
+          <div class="galeria-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+        </div>
+        <div class="galeria-item" data-index="3">
+          <img src="images/galeria-4.jpg" alt="Close em roda de motocicleta" loading="lazy">
+          <div class="galeria-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+        </div>
+        <div class="galeria-item" data-index="4">
+          <img src="images/galeria-5.jpg" alt="Equipamento de moto em detalhe" loading="lazy">
+          <div class="galeria-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+        </div>
+        <div class="galeria-item" data-index="5">
+          <img src="images/galeria-6.jpg" alt="Manutenção e alinhamento de motocicleta" loading="lazy">
+          <div class="galeria-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contato ─────────────────────────────────────────────── -->
+  <section id="contato" aria-labelledby="contato-titulo">
+    <div class="container">
+      <span class="section-tag">Entre em contato</span>
+      <h2 class="section-title" id="contato-titulo">Solicite seu <span>orçamento</span></h2>
+      <p class="section-subtitle">Fale com a gente pelo WhatsApp, e-mail ou Instagram. Respondemos rapidamente!</p>
+
+      <div class="contato-grid">
+
+        <div class="contato-info">
+          <div class="info-card">
+            <div class="info-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/5519981885648" target="_blank" rel="noopener noreferrer">(19) 98188-5648</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+            <div>
+              <h4>E-mail</h4>
+              <a href="mailto:hrwheels.alinhadora@gmail.com">hrwheels.alinhadora@gmail.com</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+            <div>
+              <h4>Endereço</h4>
+              <p>Rua Cedro, 24 – Pq. Pinheiros<br>Hortolândia/SP – CEP 13184-622</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
+            <div>
+              <h4>Horário de atendimento</h4>
+              <p>Segunda a sexta: 8h às 18h</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+            <div>
+              <h4>Instagram</h4>
+              <a href="https://www.instagram.com/hrwheels.alinhador" target="_blank" rel="noopener noreferrer">@hrwheels.alinhador</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contato-cta">
+          <h3>Pronto para elevar o nível da sua <span>oficina?</span></h3>
+          <p>Entre em contato agora e descubra como os equipamentos HR Wheels podem transformar a qualidade dos seus serviços de alinhamento.</p>
+          <a href="https://wa.me/5519981885648" target="_blank" rel="noopener noreferrer" class="cta-wa">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            Falar pelo WhatsApp
+          </a>
+          <a href="https://www.instagram.com/hrwheels.alinhador" target="_blank" rel="noopener noreferrer" class="cta-insta">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            Seguir no Instagram
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2025 HR Wheels Alinhadora · CNPJ 23.718.036/0001-00</p>
+        <p>
+          <a href="mailto:hrwheels.alinhadora@gmail.com">hrwheels.alinhadora@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Rodapé MonteSite ────────────────────────────────────── -->
+  <div id="root"></div>
+  <div id="montesite-footer-badge"></div>
+  <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
+
+  <!-- ── Elementos fixos ────────────────────────────────────── -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <button class="back-top" id="backTop" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de imagens">
+    <button class="lb-close" id="lbClose" aria-label="Fechar"><i class="fas fa-times" aria-hidden="true"></i></button>
+    <button class="lb-prev"  id="lbPrev"  aria-label="Anterior"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+    <button class="lb-next"  id="lbNext"  aria-label="Próxima"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+    <img class="lb-img" id="lbImg" src="" alt="">
+  </div>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5519981885648"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="whatsapp-float"
+     aria-label="Falar pelo WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <script>
+    /* ── Header scroll ──────────────────────────────────────────── */
+    const _hdr = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      _hdr.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    /* ── Menu mobile ────────────────────────────────────────────── */
+    const _btn  = document.getElementById('menuBtn');
+    const _ico  = document.getElementById('menuIcon');
+    const _nav  = document.getElementById('navMenu');
+
+    _btn.addEventListener('click', () => {
+      const open = _nav.classList.toggle('open');
+      _btn.setAttribute('aria-expanded', open);
+      _ico.className = open ? 'fas fa-times' : 'fas fa-bars';
+    });
+    _nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      _nav.classList.remove('open');
+      _btn.setAttribute('aria-expanded', 'false');
+      _ico.className = 'fas fa-bars';
+    }));
+
+    /* ── Scroll progress ────────────────────────────────────────── */
+    const _prog = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const tot = document.documentElement.scrollHeight - window.innerHeight;
+      _prog.style.width = (window.scrollY / tot * 100) + '%';
+    }, { passive: true });
+
+    /* ── Back to top ────────────────────────────────────────────── */
+    const _btt = document.getElementById('backTop');
+    window.addEventListener('scroll', () => {
+      _btt.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
+    _btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* ── Nav active on scroll ───────────────────────────────────── */
+    const _links = document.querySelectorAll('nav#navMenu a[href^="#"]');
+    const _navObs = new IntersectionObserver((entries) => {
+      entries.forEach(({ isIntersecting, target }) => {
+        if (isIntersecting) {
+          _links.forEach(a => a.classList.remove('active'));
+          const l = document.querySelector(`nav#navMenu a[href="#${target.id}"]`);
+          if (l) l.classList.add('active');
+        }
+      });
+    }, { threshold: 0.35 });
+    document.querySelectorAll('section[id]').forEach(s => _navObs.observe(s));
+
+    /* ── Scroll reveal ──────────────────────────────────────────── */
+    const _rv = [];
+    [
+      { s: '#sobre .section-tag, #sobre .section-title, #sobre .section-subtitle, #produtos .section-tag, #produtos .section-title, #produtos .section-subtitle, #diferenciais .section-tag, #diferenciais .section-title, #diferenciais .section-subtitle, #galeria .section-tag, #galeria .section-title, #galeria .section-subtitle, #contato .section-tag, #contato .section-title, #contato .section-subtitle', c: 'reveal', d: 0 },
+      { s: '.sobre-historia', c: 'reveal-l', d: 0   },
+      { s: '.mvv-wrap',       c: 'reveal-r', d: 100 },
+      { s: '.mvv-item',       c: 'reveal',   d: 0, st: 100 },
+      { s: '.produto-card',   c: 'reveal',   d: 0, st: 80  },
+      { s: '.produtos-dev',   c: 'reveal',   d: 0   },
+      { s: '.diferencial-item', c: 'reveal', d: 0, st: 100 },
+      { s: '.galeria-item',   c: 'reveal',   d: 0, st: 60  },
+      { s: '.contato-info',   c: 'reveal-l', d: 0   },
+      { s: '.contato-cta',    c: 'reveal-r', d: 100 },
+      { s: '.info-card',      c: 'reveal',   d: 0, st: 70  },
+    ].forEach(({ s, c, d, st = 0 }) =>
+      document.querySelectorAll(s).forEach((el, i) => {
+        el.classList.add(c);
+        el.style.transitionDelay = (d + i * st) + 'ms';
+        _rv.push(el);
+      })
+    );
+
+    const _rvObs = new IntersectionObserver((entries) => {
+      entries.forEach(({ isIntersecting, target }) => {
+        if (isIntersecting) { target.classList.add('show'); _rvObs.unobserve(target); }
+      });
+    }, { threshold: 0.1 });
+    _rv.forEach(el => _rvObs.observe(el));
+
+    /* ── Counter (stat-number com data-target) ──────────────────── */
+    document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+      const target = parseInt(el.getAttribute('data-target'));
+      const suffix = el.textContent.replace(/[0-9]/g, '').trim();
+      new IntersectionObserver(([e], obs) => {
+        if (!e.isIntersecting) return;
+        obs.unobserve(e.target);
+        const t0 = performance.now();
+        (function tick(now) {
+          const p = Math.min((now - t0) / 1500, 1);
+          el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target) + (suffix || '+');
+          if (p < 1) requestAnimationFrame(tick);
+        })(t0);
+      }, { threshold: 0.5 }).observe(el);
+    });
+
+    /* ── Lightbox ───────────────────────────────────────────────── */
+    const _lb   = document.getElementById('lightbox');
+    const _lbI  = document.getElementById('lbImg');
+    const _imgs = Array.from(document.querySelectorAll('.galeria-item img'));
+    let _idx = 0;
+
+    function openLb(i) {
+      _idx = i; _lbI.src = _imgs[i].src; _lbI.alt = _imgs[i].alt;
+      _lb.classList.add('open'); document.body.style.overflow = 'hidden';
+    }
+    function closeLb() { _lb.classList.remove('open'); document.body.style.overflow = ''; }
+    function stepLb(d) {
+      _idx = (_idx + d + _imgs.length) % _imgs.length;
+      _lbI.src = _imgs[_idx].src; _lbI.alt = _imgs[_idx].alt;
+    }
+
+    document.querySelectorAll('.galeria-item').forEach((item, i) => item.addEventListener('click', () => openLb(i)));
+    document.getElementById('lbClose').addEventListener('click', closeLb);
+    document.getElementById('lbPrev').addEventListener('click', () => stepLb(-1));
+    document.getElementById('lbNext').addEventListener('click', () => stepLb(1));
+    _lb.addEventListener('click', e => { if (e.target === _lb) closeLb(); });
+    document.addEventListener('keydown', e => {
+      if (!_lb.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLb();
+      if (e.key === 'ArrowLeft') stepLb(-1);
+      if (e.key === 'ArrowRight') stepLb(1);
+    });
+  </script>
+
+</body>
+</html>
