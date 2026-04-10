@@ -220,8 +220,10 @@
       background:
         radial-gradient(ellipse at 50% -10%, rgba(201,168,76,.12) 0%, transparent 55%),
         repeating-linear-gradient(60deg,  rgba(201,168,76,.025) 0px, rgba(201,168,76,.025) 1px, transparent 1px, transparent 80px),
-        repeating-linear-gradient(-60deg, rgba(201,168,76,.015) 0px, rgba(201,168,76,.015) 1px, transparent 1px, transparent 100px);
-      background-color: var(--black);
+        repeating-linear-gradient(-60deg, rgba(201,168,76,.015) 0px, rgba(201,168,76,.015) 1px, transparent 1px, transparent 100px),
+        linear-gradient(rgba(10,10,10,.84), rgba(10,10,10,.84)),
+        url('images/bg-hero.jpg') center / cover no-repeat;
+      background-attachment: scroll, scroll, scroll, scroll, fixed;
       display: flex;
       align-items: center;
     }
@@ -308,7 +310,10 @@
     /* ── SOBRE ────────────────────────────────────────────────── */
     #sobre {
       padding: 96px 0;
-      background: var(--black-2);
+      background:
+        linear-gradient(rgba(10,10,10,.90), rgba(10,10,10,.90)),
+        url('images/bg-sobre.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
     }
 
     .sobre-grid {
@@ -378,7 +383,10 @@
     /* ── PRODUTOS ─────────────────────────────────────────────── */
     #produtos {
       padding: 96px 0;
-      background: var(--black);
+      background:
+        linear-gradient(rgba(10,10,10,.88), rgba(10,10,10,.88)),
+        url('images/bg-produtos.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
     }
 
     .produtos-grid {
@@ -568,7 +576,10 @@
     /* ── CONTATO ──────────────────────────────────────────────── */
     #contato {
       padding: 96px 0;
-      background: var(--black);
+      background:
+        linear-gradient(rgba(10,10,10,.88), rgba(10,10,10,.88)),
+        url('images/bg-contato.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
     }
 
     .contato-grid {
@@ -733,7 +744,11 @@
 
     /* ── Responsividade ───────────────────────────────────────── */
     @media (max-width: 1023px) {
-      #diferenciais { background-attachment: scroll, scroll; }
+      #hero        { background-attachment: scroll, scroll, scroll, scroll, scroll; }
+      #sobre,
+      #produtos,
+      #diferenciais,
+      #contato     { background-attachment: scroll, scroll; }
     }
 
     @media (max-width: 1100px) {
