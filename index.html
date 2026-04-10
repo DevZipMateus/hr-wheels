@@ -821,82 +821,152 @@
     .reveal.show, .reveal-l.show, .reveal-r.show { opacity: 1; transform: none; }
 
     /* ── Responsividade ───────────────────────────────────────── */
+
+    /* Parallax desativado em touch */
     @media (max-width: 1023px) {
       #hero        { background-attachment: scroll, scroll, scroll, scroll, scroll; }
-      #sobre,
-      #produtos,
-      #diferenciais,
-      #contato     { background-attachment: scroll, scroll; }
+      #sobre, #produtos, #diferenciais, #contato { background-attachment: scroll, scroll; }
     }
 
-    @media (max-width: 1100px) {
-      nav#navMenu { padding-right: 20px; }
-      .sobre-grid        { grid-template-columns: 1fr; gap: 40px; }
-      .diferenciais-grid { grid-template-columns: repeat(2, 1fr); }
+    /* ── Tablet landscape / laptop pequeno (≤1180px) ───────────── */
+    @media (max-width: 1180px) {
+      nav#navMenu          { padding-right: 20px; }
       #sobre, #produtos, #diferenciais, #galeria, #contato { padding: 80px 0; }
+      .sobre-grid          { grid-template-columns: 1fr; gap: 40px; }
+      .sobre-historia .section-title { text-align: center; }
+      .mvv-list            { max-width: 640px; margin: 0 auto; }
+      .diferenciais-grid   { grid-template-columns: repeat(3, 1fr); }
+      .contato-grid        { gap: 40px; }
     }
 
+    /* ── Tablet portrait (≤1024px) ──────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero-logo    { height: 108px; }
+      .sobre-grid   { margin-top: 44px; }
+      .produtos-grid{ gap: 18px; }
+    }
+
+    /* ── Mobile nav + layout (≤768px) ───────────────────────────── */
     @media (max-width: 768px) {
       .menu-btn { display: block; }
       nav#navMenu {
         position: fixed;
         top: var(--header-h); right: 0; left: 0;
-        height: auto;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 16px 20px;
+        height: auto; flex-direction: column; align-items: stretch;
+        padding: 16px 20px; gap: 4px;
         background: rgba(10,10,10,.98);
         border-top: 1px solid var(--border);
         border-bottom: 1px solid var(--border);
-        gap: 4px;
         display: none;
       }
       nav#navMenu.open { display: flex; }
-      nav#navMenu a { padding: 12px 16px; border-radius: 6px; }
+      nav#navMenu a { padding: 12px 16px; border-radius: 6px; font-size: 15px; }
 
       #sobre, #produtos, #diferenciais, #galeria, #contato { padding: 72px 0; }
-      .hero-inner { padding: 60px 0 48px; }
-      .hero-logo { height: 92px; }
-      .hero-stats { gap: 28px; }
+      .hero-inner  { padding: 56px 0 44px; }
+      .hero-logo   { height: 88px; }
+      .hero-stats  { gap: 28px; }
+      #hero h2     { max-width: 92%; }
 
-      .produtos-grid { grid-template-columns: 1fr; }
-      .galeria-grid  { grid-template-columns: repeat(2, 1fr); }
-      .galeria-item, .galeria-item:nth-child(4), .galeria-item:nth-child(5) { grid-column: span 1; }
-      .galeria-item:nth-child(5) { grid-column: 1 / -1; }
-      .contato-grid  { grid-template-columns: 1fr; }
+      .produtos-grid { grid-template-columns: 1fr; gap: 16px; }
+      .diferenciais-grid { grid-template-columns: repeat(2, 1fr); }
+      .galeria-grid  { grid-template-columns: 1fr; }
+      .galeria-item,
+      .galeria-item:nth-child(4),
+      .galeria-item:nth-child(5) { grid-column: span 1; }
+      .contato-grid  { grid-template-columns: 1fr; gap: 28px; }
+      .footer-inner  { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
     }
 
-    @media (max-width: 480px) {
-      .container { padding: 0 16px; }
+    /* ── Phablet / telefone grande (≤600px) ─────────────────────── */
+    @media (max-width: 600px) {
+      :root { --header-h: 68px; }
+      .container   { padding: 0 20px; }
       #sobre, #produtos, #diferenciais, #galeria, #contato { padding: 64px 0; }
-      .hero-inner { padding: 48px 0 40px; }
-      .hero-logo { height: 72px; }
-      #hero h1 { font-size: clamp(54px, 15vw, 90px); }
-      .hero-btns { flex-direction: column; align-items: center; }
-      .btn-gold, .btn-outline { width: 100%; max-width: 320px; justify-content: center; }
-      .diferenciais-grid { grid-template-columns: 1fr; }
-      .galeria-grid { grid-template-columns: 1fr; }
-      .galeria-item, .galeria-item:nth-child(4), .galeria-item:nth-child(5) { grid-column: span 1; }
-      .produto-card { padding: 28px 22px; }
-      .contato-cta  { padding: 28px 20px; }
+      .hero-inner  { padding: 48px 0 40px; }
+      .hero-logo   { height: 74px; }
+      .hero-badge  { font-size: 10px; letter-spacing: 2px; padding: 5px 14px; }
+      #hero h2     { font-size: 13px; }
+      .hero-btns   { flex-direction: column; align-items: center; gap: 10px; margin-bottom: 44px; }
+      .btn-gold, .btn-outline { width: 100%; max-width: 300px; justify-content: center; }
+      .hero-stats  { gap: 18px; padding-top: 28px; }
+      .stat-number { font-size: 34px; }
+      .stat-label  { font-size: 10px; letter-spacing: 1.5px; }
+      .section-subtitle { font-size: 14.5px; }
+      .sobre-grid  { margin-top: 36px; }
+      .mvv-item    { padding: 16px 18px; }
+      .diferenciais-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .diferencial-item  { padding: 28px 14px; }
+      .diferencial-item h3 { font-size: 15px; }
+      .contato-cta { padding: 28px 22px; }
+      .contato-cta h3 { font-size: 24px; }
     }
 
-    @media (max-width: 375px) {
-      .container { padding: 0 12px; }
-      :root { --header-h: 64px; }
+    /* ── Telefone médio (≤480px) ────────────────────────────────── */
+    @media (max-width: 480px) {
+      .container   { padding: 0 16px; }
       #sobre, #produtos, #diferenciais, #galeria, #contato { padding: 56px 0; }
-      .hero-logo { height: 60px; }
+      .hero-inner  { padding: 40px 0 36px; }
+      .hero-logo   { height: 64px; }
+      #hero h1     { font-size: clamp(52px, 15vw, 88px); }
+      .hero-stats  { gap: 14px; }
+      .stat-number { font-size: 28px; }
+      .diferenciais-grid { grid-template-columns: 1fr; }
+      .produto-card { padding: 28px 22px; }
+      .contato-cta  { padding: 24px 18px; }
+      .contato-cta h3 { font-size: 21px; }
     }
 
+    /* ── Telefone pequeno (≤375px) ──────────────────────────────── */
+    @media (max-width: 375px) {
+      :root { --header-h: 64px; }
+      .container   { padding: 0 12px; }
+      #sobre, #produtos, #diferenciais, #galeria, #contato { padding: 48px 0; }
+      .hero-logo   { height: 54px; }
+      #hero h1     { font-size: clamp(46px, 16vw, 80px); }
+      .hero-badge  { font-size: 9px; letter-spacing: 1.5px; padding: 4px 12px; }
+      .stat-number { font-size: 24px; }
+      .stat-label  { font-size: 9px; }
+      .mvv-item    { padding: 14px 14px; }
+      .contato-cta { padding: 20px 16px; }
+    }
+
+    /* ── Mínimo absoluto (≤320px) ───────────────────────────────── */
+    @media (max-width: 320px) {
+      .hero-stats  { flex-direction: column; align-items: center; gap: 10px; padding-top: 20px; }
+      .stat-item   { display: flex; align-items: center; gap: 10px; }
+      #hero h2     { font-size: 11px; letter-spacing: 1px; }
+      .section-title { font-size: clamp(22px, 8vw, 36px); }
+    }
+
+    /* ── Wide desktop (≥1400px) ─────────────────────────────────── */
     @media (min-width: 1400px) {
-      .container { max-width: 1280px; }
-      nav#navMenu { padding-right: calc((100vw - 1280px) / 2 + 24px); }
+      .container   { max-width: 1280px; }
+      nav#navMenu  { padding-right: calc((100vw - 1280px) / 2 + 24px); }
     }
 
+    /* ── Full HD (≥1920px) ──────────────────────────────────────── */
     @media (min-width: 1920px) {
-      .container { max-width: 1520px; }
-      nav#navMenu { padding-right: calc((100vw - 1520px) / 2 + 24px); }
+      .container   { max-width: 1520px; }
+      nav#navMenu  { padding-right: calc((100vw - 1520px) / 2 + 28px); }
       #sobre, #produtos, #diferenciais, #galeria, #contato { padding: 112px 0; }
+      .section-subtitle { font-size: 17px; }
+      .sobre-grid  { gap: 80px; }
+      .diferenciais-grid { gap: 24px; }
+    }
+
+    /* ── 4K / QHD (≥2560px) ─────────────────────────────────────── */
+    @media (min-width: 2560px) {
+      :root        { --header-h: 88px; }
+      .container   { max-width: 2000px; }
+      nav#navMenu  { padding-right: calc((100vw - 2000px) / 2 + 32px); }
+      #sobre, #produtos, #diferenciais, #galeria, #contato { padding: 140px 0; }
+      .section-title    { font-size: clamp(46px, 2.2vw, 64px); }
+      .section-subtitle { font-size: 19px; max-width: 760px; }
+      .hero-logo   { height: 180px; }
+      .produtos-grid    { gap: 32px; }
+      .diferenciais-grid { gap: 28px; }
+      .sobre-grid  { gap: 96px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
