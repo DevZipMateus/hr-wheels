@@ -516,10 +516,13 @@
 
     .galeria-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 12px;
       margin-top: 56px;
     }
+    .galeria-item             { grid-column: span 2; }
+    .galeria-item:nth-child(4){ grid-column: 2 / 4; }
+    .galeria-item:nth-child(5){ grid-column: 4 / 6; }
 
     .galeria-item {
       position: relative;
@@ -783,6 +786,8 @@
 
       .produtos-grid { grid-template-columns: 1fr; }
       .galeria-grid  { grid-template-columns: repeat(2, 1fr); }
+      .galeria-item, .galeria-item:nth-child(4), .galeria-item:nth-child(5) { grid-column: span 1; }
+      .galeria-item:nth-child(5) { grid-column: 1 / -1; }
       .contato-grid  { grid-template-columns: 1fr; }
     }
 
@@ -796,6 +801,7 @@
       .btn-gold, .btn-outline { width: 100%; max-width: 320px; justify-content: center; }
       .diferenciais-grid { grid-template-columns: 1fr; }
       .galeria-grid { grid-template-columns: 1fr; }
+      .galeria-item, .galeria-item:nth-child(4), .galeria-item:nth-child(5) { grid-column: span 1; }
       .produto-card { padding: 28px 22px; }
       .contato-cta  { padding: 28px 20px; }
     }
@@ -1041,33 +1047,29 @@
   <!-- ── Galeria ─────────────────────────────────────────────── -->
   <section id="galeria" aria-labelledby="galeria-titulo">
     <div class="container">
-      <span class="section-tag">Nossos trabalhos</span>
-      <h2 class="section-title" id="galeria-titulo">Equipamentos e <span>serviços</span><br>em ação</h2>
-      <p class="section-subtitle">Veja de perto a qualidade dos nossos equipamentos e o resultado na prática.</p>
+      <span class="section-tag">Catálogo</span>
+      <h2 class="section-title" id="galeria-titulo">Nossos <span>equipamentos</span></h2>
+      <p class="section-subtitle">Conheça a linha completa de equipamentos HR Wheels para alinhamento de rodas de motocicletas.</p>
 
       <div class="galeria-grid">
         <div class="galeria-item" data-index="0">
-          <img src="images/galeria-1.jpg" alt="Mecânico trabalhando em motocicleta" loading="lazy">
+          <img src="images/galeria-1.jpg" alt="Alinhador de Mesa — HR Wheels" loading="lazy">
           <div class="galeria-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
         </div>
         <div class="galeria-item" data-index="1">
-          <img src="images/galeria-2.jpg" alt="Profissional realizando serviço em moto" loading="lazy">
+          <img src="images/galeria-2.jpg" alt="Alinhador de Mesa e Bengala — HR Wheels" loading="lazy">
           <div class="galeria-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
         </div>
         <div class="galeria-item" data-index="2">
-          <img src="images/galeria-3.jpg" alt="Motocicleta em manutenção especializada" loading="lazy">
+          <img src="images/galeria-3.jpg" alt="Alinhador de Bengala — HR Wheels" loading="lazy">
           <div class="galeria-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
         </div>
         <div class="galeria-item" data-index="3">
-          <img src="images/galeria-4.jpg" alt="Close em roda de motocicleta" loading="lazy">
+          <img src="images/galeria-4.jpg" alt="Alinhadora de Roda de Moto BM — HR Wheels" loading="lazy">
           <div class="galeria-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
         </div>
         <div class="galeria-item" data-index="4">
-          <img src="images/galeria-5.jpg" alt="Equipamento de moto em detalhe" loading="lazy">
-          <div class="galeria-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
-        </div>
-        <div class="galeria-item" data-index="5">
-          <img src="images/galeria-6.jpg" alt="Manutenção e alinhamento de motocicleta" loading="lazy">
+          <img src="images/galeria-5.jpg" alt="Alinhadora de Roda de Moto BF — HR Wheels" loading="lazy">
           <div class="galeria-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></div>
         </div>
       </div>
