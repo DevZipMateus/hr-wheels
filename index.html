@@ -728,12 +728,88 @@
       from { opacity: 0; transform: translateY(28px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    .hero-logo  { animation: fadeUp .7s ease .1s  both; }
+    @keyframes logoPulse {
+      0%, 100% { filter: drop-shadow(0 0 22px rgba(201,168,76,.22)); }
+      50%       { filter: drop-shadow(0 0 44px rgba(201,168,76,.65)); }
+    }
+    .hero-logo  { animation: fadeUp .7s ease .1s both, logoPulse 3.5s ease-in-out 1.2s infinite; }
     .hero-badge { animation: fadeUp .6s ease .3s  both; }
     #hero h1    { animation: fadeUp .6s ease .45s both; }
     #hero h2    { animation: fadeUp .6s ease .6s  both; }
     .hero-btns  { animation: fadeUp .6s ease .75s both; }
     .hero-stats { animation: fadeUp .6s ease .9s  both; }
+
+    /* ── Hero canvas (partículas) ─────────────────────────────── */
+    #heroCanvas {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      pointer-events: none; z-index: 0;
+    }
+    #hero { position: relative; }
+    #hero .container { position: relative; z-index: 1; }
+
+    /* ── WhatsApp pulse ───────────────────────────────────────── */
+    .whatsapp-float { position: fixed; }
+    .whatsapp-float::before,
+    .whatsapp-float::after {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: 50%;
+      background: #25D366;
+      animation: waPulse 2.6s ease-out infinite;
+      z-index: -1;
+    }
+    .whatsapp-float::after { animation-delay: 1.3s; }
+    @keyframes waPulse {
+      0%   { transform: scale(1); opacity: .55; }
+      100% { transform: scale(2.4); opacity: 0; }
+    }
+
+    /* ── Shimmer nos botões dourados ──────────────────────────── */
+    .btn-gold { overflow: hidden; }
+    .btn-gold::after {
+      content: '';
+      position: absolute; top: 0; left: -100%;
+      width: 55%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+      transform: skewX(-20deg);
+      pointer-events: none;
+    }
+    .btn-gold:hover::after { animation: btnShimmer .55s ease forwards; }
+    @keyframes btnShimmer {
+      0%   { left: -100%; }
+      100% { left: 160%; }
+    }
+
+    /* ── Glow no texto dourado dos headings ───────────────────── */
+    @keyframes goldGlow {
+      0%, 100% { text-shadow: 0 0 8px rgba(201,168,76,.0); }
+      50%       { text-shadow: 0 0 20px rgba(201,168,76,.55), 0 0 40px rgba(201,168,76,.2); }
+    }
+    .section-title span { animation: goldGlow 4s ease-in-out 0.8s infinite; }
+    #hero h1 span       { animation: fadeUp .6s ease .45s both, goldGlow 4s ease-in-out 1s infinite; }
+
+    /* ── Produto card: ícone animado no hover ─────────────────── */
+    .produto-icon {
+      transition: background .3s, transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
+    }
+    .produto-card:hover .produto-icon {
+      transform: scale(1.18) rotate(-8deg);
+      background: rgba(201,168,76,.22);
+      box-shadow: 0 0 24px rgba(201,168,76,.35);
+    }
+
+    /* ── Diferencial: ícone animado no hover ──────────────────── */
+    .diferencial-item i {
+      display: block;
+      font-size: 28px; color: var(--gold);
+      margin-bottom: 14px;
+      transition: transform .35s cubic-bezier(.34,1.56,.64,1), color .3s;
+    }
+    .diferencial-item:hover i {
+      transform: scale(1.25) rotate(10deg);
+      color: var(--gold-light);
+    }
 
     /* ── Scroll reveal ────────────────────────────────────────── */
     .reveal, .reveal-l, .reveal-r {
@@ -1301,6 +1377,65 @@
       if (e.key === 'Escape') closeLb();
       if (e.key === 'ArrowLeft') stepLb(-1);
       if (e.key === 'ArrowRight') stepLb(1);
+    });
+
+    /* ── Partículas douradas no hero ────────────────────────────── */
+    (function() {
+      const hero = document.getElementById('hero');
+      const canvas = document.createElement('canvas');
+      canvas.id = 'heroCanvas';
+      hero.prepend(canvas);
+      const ctx = canvas.getContext('2d');
+      let W, H, pts;
+
+      function Particle() {
+        this.reset = function(fromBottom) {
+          this.x = Math.random() * W;
+          this.y = fromBottom ? H + Math.random() * 40 : Math.random() * H;
+          this.r = Math.random() * 1.6 + 0.3;
+          this.vy = -(Math.random() * 0.5 + 0.18);
+          this.vx = (Math.random() - 0.5) * 0.25;
+          this.a = Math.random() * 0.7 + 0.15;
+          this.da = Math.random() * 0.003 + 0.001;
+        };
+        this.reset(false);
+      }
+
+      function resize() {
+        W = canvas.width = hero.offsetWidth;
+        H = canvas.height = hero.offsetHeight;
+      }
+
+      function init() { resize(); pts = Array.from({ length: 60 }, () => new Particle()); }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        pts.forEach(p => {
+          p.x += p.vx; p.y += p.vy; p.a -= p.da;
+          if (p.a <= 0 || p.y < -8) p.reset(true);
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(201,168,76,${p.a})`;
+          ctx.fill();
+        });
+        requestAnimationFrame(draw);
+      }
+
+      init(); draw();
+      window.addEventListener('resize', init);
+    })();
+
+    /* ── Tilt 3D nos cards de produto ───────────────────────────── */
+    const _isMobile = () => window.innerWidth < 768;
+    document.querySelectorAll('.produto-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        if (_isMobile()) return;
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width  - 0.5;
+        const y = (e.clientY - r.top)  / r.height - 0.5;
+        card.style.transform = `translateY(-5px) perspective(700px) rotateX(${-y * 9}deg) rotateY(${x * 9}deg)`;
+      });
+      card.addEventListener('mouseleave', () => { card.style.transform = ''; });
     });
   </script>
 
